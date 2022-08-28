@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="ar" data-textdirection="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Speculum</title>
+    @await Html.PartialAsync(PathsViews._SharedStyles)
+    @RenderSection(Sections.Styles, required: false)
+
+</head>
+<body class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+    @await Html.PartialAsync(PathsViews._Header)
+
+    <div class="container body-content">
+        @RenderBody()
+        @await Html.PartialAsync(PathsViews._Footer)
+    </div>
+    @RenderSection(Sections.Modals, required: false)
+    @await Html.PartialAsync(PathsViews._SharedScripts)
+    @RenderSection(Sections.Scripts, required: false)
+</body>
+</html>
+
